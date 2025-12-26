@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>Mi Billetera</h2>
+        </header>
+
+        <div class="balance-container">
+            <h4>Tu Balance</h4>
+            <h1 id="balance">$0.00</h1>
+        </div>
+
+        <div class="inc-exp-container">
+            <div>
+                <h4>Ingresos</h4>
+                <p id="money-plus" class="money plus">+$0.00</p>
+            </div>
+            <div>
+                <h4>Gastos</h4>
+                <p id="money-minus" class="money minus">-$0.00</p>
+            </div>
+        </div>
+
+        <h3>Historial</h3>
+        <ul id="list" class="list">
+            </ul>
+
+        <h3>Agregar nueva transacción</h3>
+        <form id="form">
+            <div class="form-control">
+                <label for="text">Concepto</label>
+                <input type="text" id="text" placeholder="Ej: Salario, Comida..." autocomplete="off">
+            </div>
+            <div class="form-control">
+                <label for="amount">Cantidad <br> <small>(Positivo = Ingreso, Negativo = Gasto)</small></label>
+                <div class="input-group">
+                    <select id="type">
+                        <option value="income">Ingreso (+)</option>
+                        <option value="expense">Gasto (-)</option>
+                    </select>
+                    <input type="number" id="amount" placeholder="0" step="0.01">
+                </div>
+            </div>
+            <button class="btn">Agregar Transacción</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
